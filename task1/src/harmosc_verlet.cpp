@@ -18,7 +18,7 @@ float momentum_analytical(float time){
 int main(int argc, char const *argv[]) {
   if(argc == 1){
     cout << "ERROR: Expected number of steps.\nUSAGE: " << argv[1] << " NSTEPS" << endl;
-  }Þ
+  }
   float x0 = 0;
   float p0 = 1;
   float total_time = 12.56637061; //Emulate program given by Prof.

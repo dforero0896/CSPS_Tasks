@@ -18,6 +18,7 @@ for j, method in enumerate(methods):
         rms_errors[i,j] = split_output[3]
     sys.stdout.write("\t\tDone.\n")
 plt.figure()
+plt.yscale('log')
 [plt.plot(N_steps, abs_errors[:,m], label = methods[m], lw=4) for m in range(len(methods))]
 plt.title("Absolute error")
 plt.legend()
@@ -26,6 +27,7 @@ plt.gcf()
 plt.savefig("../results/abserr.png")
 
 plt.figure()
+plt.yscale('log')
 [plt.plot(N_steps, drift_errors[:,m], label = methods[m], lw= 4) for m in range(len(methods))]
 plt.title("Drift error")
 plt.legend()
@@ -34,6 +36,7 @@ plt.gcf()
 plt.savefig("../results/drifterr.png")
 
 plt.figure()
+plt.yscale('log')
 [plt.plot(N_steps, rms_errors[:,m], label = methods[m], lw =4) for m in range(len(methods))]
 plt.title("RMS error")
 plt.legend()

@@ -4,8 +4,8 @@ import matplotlib.pyplot as plt
 import sys
 import os
 from scipy import stats
-if len(sys.argv)!= 5:
-    sys.stdout.write("ERROR:\tUnexpected number of arguments.\nUSAGE:\t%s CPPNAME COMPILE NSTEPS SHOWPLOT\n"%sys.argv[0])
+if len(sys.argv)!= 6:
+    sys.stdout.write("ERROR:\tUnexpected number of arguments.\nUSAGE:\t%s CPPNAME COMPILE NSTEPS SHOWPLOT SHOWANALYTIC\n"%sys.argv[0])
     sys.exit(1)
 N_steps = sys.argv[3]
 if int(sys.argv[2]):
@@ -18,10 +18,10 @@ if int(sys.argv[4]):
     plt.plot(data[:,0], data[:,1], label = 'Position')
     plt.plot(data[:,0], data[:,2], label = 'Momentum')
     plt.plot(data[:,0], energy , label = 'Energy')
-
-    plt.plot(data[:,0], data[:,3], label = 'Position-A')
-    plt.plot(data[:,0], data[:,4], label = 'Momentum-A')
-    plt.plot(data[:,0], energy_a, label = 'Energy-A')
+    if int(sys.argv[5]):
+        plt.plot(data[:,0], data[:,3], label = 'Position-A')
+        plt.plot(data[:,0], data[:,4], label = 'Momentum-A')
+        plt.plot(data[:,0], energy_a, label = 'Energy-A')
     plt.legend(loc=0)
     plt.show()
 # Compute absolute error

@@ -1,0 +1,38 @@
+#!/usr/bin/expect -f
+set a [lindex $argv 0];
+set lattice_x [lindex $argv 1];
+set lattice_y [lindex $argv 2];
+set lattice_z [lindex $argv 3];
+set max_rand_disp [lindex $argv 4];
+set fname [lindex $argv 5];
+set timeout -1
+spawn crystal.x
+match_max 100000
+expect -exact "\r
+Crystal: generate fcc coordinates\r
+\r
+Reminder: for LJ truncated at 2.5, a_eq = 1.5496 at P=0\r
+          for the Al glue system , a_eq = 4.032 A at P=0\r
+\r
+Lattice spacing a = "
+send -- "$a\r"
+expect -exact "$a\r
+\r
+Reminder: minimum image requires at least  3 cells along x,y,z for LJ\r
+                                           7 cells along x,y,z for Al\r
+\r
+Number of cells along x = "
+send -- "$lattice_x\r"
+expect -exact "$lattice_x\r
+Number of cells along y = "
+send -- "$lattice_y\r"
+expect -exact "$lattice_y\r
+Number of cells along z = "
+send -- "$lattice_z\r"
+expect -exact "$lattice_z\r
+Maximum random displacement = "
+send -- "$max_rand_disp\r"
+expect -exact "$max_rand_disp\r
+Name of coordinates file = "
+send -- "$fname\r"
+expect eof

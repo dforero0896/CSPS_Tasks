@@ -99,6 +99,7 @@ S(k) = 1 + 4\pi\rho_0\int_{\mathbb{R}^+}r^2 [g(r) - 1] \frac{\sin kr}{kr} dr.
 \end{equation}
 We expect then, that the peaks in $S(k)$ are located at $k\sim 2\pi/s$ with $s$ the typical separation of particles in the system.\\
 Following the analogy with cosmology, the structure factor is analogous to the cosmological power spectrum $P(k)$ measured, for example, in the CMB\cite{Peebles1980}.
+It should be noted that the properties $g(r)$ and $S(k)$ are static in the sense that they are independent of time.
 \subsection{The Diffusion coefficient \label{sec:diffcoeff}}
 The diffusion equation
 \begin{equation}
@@ -146,6 +147,22 @@ I \approx \frac{1}{N}\sum_{i=1}^{N}f(\vb{x}_i),
 \end{equation}
 where the $\vb{x}_i$ are random numbers (vectors) that follow the given PDF (or even a similar one).\\
 Physically speaking, the PDF to be sampled is the one that dictates how probable a state $\vb{x}$ is, based on its energy $H$ at a temperature $\beta^{-1}$. The Monte Carlo simulation will then randomly probe the phase space for the system and allow the estimation of important physical quantities, which are typically, averages (such as $E = \average{H}$, the average energy of the system.).
+\subsubsection{Blocking Analysis}
+To generate the random numbers $\vb{x}_i \sim \omega(\vb{x})$ it is usually convenient to use correlated sampling. The Metropolis-Hastings \cite{Metropolis1953, Hastings1970} algorithm allows for obtaining random numbers that follow any desired PDF, with the caveat that the resulting chain of numbers will be correlated. This is an issue if one wants to estimate the error in the computation of the integrals, since the usual formula for the error of a mean of $N$ numbers $x$,
+\begin{equation}
+\sigma_{\average{x}} = \frac{\sigma_x}{\sqrt{N}},
+\end{equation}
+is only valid for an independent chain of numbers.\\
+Blocking analysis is a tool to estimate the uncertainty in the integral computation for a correlated chain of numbers. To do this, we transform the initial chain of $N$ numbers into a chain of $N/2$ numbers via averaging pairwise, This operation is commonly called an average-pool. Such a transformation is done recursively $M$ times, such that at the $M$-th iteration, the length of the chain is $N(M) = N/2^M$. We can compute the standard deviation at each iteration as usual
+\begin{equation}
+\sigma_{x}^2(M) = \frac{1}{N(M)}\sum_{i=1}^{N(M)}(x_{M,i} - \average{x})^2,
+\end{equation}
+where $x_{M,i}$ denotes the $i$-th value in the $M$-th chain.\\
+Now, the error in the average evolves with $M$ as 
+\begin{equation}
+\sigma_{\average{x}}(M) = \frac{\sigma_x(M)}{\sqrt{N(M)}}.
+\end{equation}
+When $\sigma_{\average{x}}(M)$ reaches a plateau, we see that it is no longer dependent of $M$ and is indeed the correct estimation of the error in the average.
 \section{The simulations}
 \subsection{Liquid Argon}
 Rahman\cite{Rahman1964} studied the properties of a liquid Argon system consisting of $N=864$ atoms in a box of length $L = \SI{34.8}{\AA} = 10.229\sigma$. The system was at temperature $T = \SI{94.4}{\kelvin}$ and had a density $\rho_0 = \SI{1.374}{\gram\per\cubic\centi\meter}$. In this simulation, Argon atoms of mass $M = \SI{6.69e-26}{\kilogram}$ interact through the potential shown in equation \ref{eq:lennardjones} with parameters $\epsilon/k_b = \SI{120}{\kelvin}$ and $\sigma = \SI{3.4}{\AA}$. Additionally, the interaction range was cut-off at $R = 2.25\sigma$, while periodic boundary conditions in all directions were assumed. Finally, the time step is defined $h = \SI{1e-2}{\pico\second}$.\\
@@ -172,7 +189,7 @@ As a check of the simulation temperature, we study the temperature of the system
 	\label{fig:gofr_mc}
 \end{figure}
 The RDF was directly sampled by the \md code and the results are shown in figure \ref{fig:gofr}. The peaks of the curve were extracted  and are also shown (in physical units). The pattern is typical of a liquid, which has no definite crystal structure\cite{Simon2013}. The results are comparable to those shown in \textcite{Rahman1964}, where the first 3 peaks were extracted. The relative errors for these, between the two measurements are $0.10\%,\ 1.58\%$, and $2.59\%$ respectively. Additionally, this simulation allows for the computation of two extra peaks as reported in figure \ref{fig:gofr}.\\
-The Monte Carlo simulation is also able to directly sample the RDF at run-time. The number of equilibration and production cycles was set to $\num{100000}$ and the number of steps between property sampling to 5. Figure \ref{fig:gofr_mc} shows the resulting curve. Notice that the curve is indeed very similar to figure \ref{fig:gofr}. The peaks are also shown. These are compared with Ref. \cite{Rahman1964}, resulting in percent errors of 1.04\%, 0.61\% and 2.23\% respectively for the first 3 (available) peaks. 
+The Monte Carlo simulation is also able to directly sample the RDF at run-time. The number of equilibration and production cycles was set to $\num{100000}$ and the number of steps between property sampling to 5. Figure \ref{fig:gofr_mc} shows the resulting curve. Notice that the curve is indeed very similar to figure \ref{fig:gofr}. The peaks are also shown. These are compared with Ref. \cite{Rahman1964}, resulting in percent errors of 1.04\%, 0.61\% and 2.23\% respectively for the first 3 (available) peaks. Regarding the differences between the grid integration and the MC approaches, the RDFs show sub 1\% differences for the first 5 peaks shown, while the last one presents a 1.5\% percent error. This shows the equivalence of both techniques for the calculation of $g(r)$.
 \subsection{Structure factor}
 \begin{figure}
 	\centering
@@ -187,16 +204,17 @@ The Monte Carlo simulation is also able to directly sample the RDF at run-time. 
 	\label{fig:sofk_mc}
 \end{figure}
 The structure factor can either be directly sampled from the velocity distribution or computed as the Fourier transform (FT) of $g(r)$ as shown in equation \ref{eq:sofk}. Both these approaches were taken and results are shown in figure \ref{fig:sofk}. The peak positions are extracted for both cases and are shown in the same figure. The first peak shown has no physical meaning and is more prominent on the FT, given the inaccuracies that arise from this computation. We then focus on the subsequent maxima. The values at the left of each peak in figure \ref{fig:sofk} show the peak positions for the FT computation, while the values on the right show it for the direct sampling case.\\
-The values reported in \citet{Rahman1964} are shown in table \ref{tab:sofk} alongside the results for all the approaches tested in the present work. Notice that the errors are relatively small as in the case of $g(r)$. Furthermore, the average error among all peaks is lowest for the direct sampling case vs. \citet{Rahman1964} (0.61~\%), while the highest is for the MC vs. the same reference (1.3~\%).
+The values reported in \citet{Rahman1964} are shown in table \ref{tab:sofk} alongside the percent errors for all the approaches tested in the present work. Notice that the errors are relatively small, as in the case of $g(r)$. Furthermore, the average error among all peaks is lowest for the direct sampling case vs. \citet{Rahman1964} (0.61~\%), while the highest is for the MC vs. the same reference (1.3~\%). The last two columns of table \ref{tab:sofk} show the percent errors of the peaks extracted from $S(k)$ sampled from the MC simulation compared to the two techniques used in the GI one. Evidently, the errors are small and, in average, below 1\%. It is then safe to state that the approaches are all equivalent, as expected.\\
+It is worth noting that in figures \ref{fig:gofr_mc} and \ref{fig:sofk_mc}, the shaded region corresponding to the ``tries'' or the different extractions of the functions at different steps is almost invisible. Indeed, in the case of $S(k)$, it is only visible in the region of $k\sigma$ close to 0, where the function is dominated by artifacts of the Fourier transform (peaks related to the inverse length of the simulation box). This shows this properties are in fact, static.
 \begin{table}
-\begin{tabular}{rrrr}
+\begin{tabular}{rrrrrr}
 	\hline
-	$(k\sigma)_\mathrm{R}$ &   \% e$_\mathrm{R-FT}$ &   \% e$_\mathrm{R-D}$ &   \% e$_\mathrm{R-MC}$ \\
+	$(k\sigma)_{\mathrm{R}}$ &   \% e$_{\mathrm{R-FT}}$ &   \% e$_{\mathrm{R-D}}$ &   \% e$_{\mathrm{R-MC}}$ &   \% e$_{\mathrm{D-MC}}$ &   \% e$_{\mathrm{FT-MC}}$ \\
 	\hline
-	6.80 &                    1.15 &                   0.40 &                    2.00 \\
-	12.50 &                    0.33 &                   0.88 &                    0.61 \\
-	18.50 &                    0.76 &                   1.03 &                    1.75 \\
-	24.80 &                    1.30 &                   0.13 &                    1.04 \\
+	6.80 &                     1.15 &                    0.40 &                     2.00 &                     1.59 &                      0.84 \\
+	12.50 &                     0.33 &                    0.88 &                     0.61 &                     0.27 &                      0.95 \\
+	18.50 &                     0.76 &                    1.03 &                     1.75 &                     0.71 &                      0.99 \\
+	24.80 &                     1.30 &                    0.13 &                     1.04 &                     1.17 &                      0.26 \\
 	\hline
 \end{tabular}
 
@@ -218,8 +236,23 @@ As a second approach, the diffusion coefficient is also calculated from the inte
 	\caption{Normalized VACF plot for the GI simulation. Solid curve shows the mean value of all tries (the 19 simulatons) and the reported value is its integral. Shaded region (faint curves) show the different tries. The reported uncertainty in $D_\mathrm{VACF}$ is given by the standard deviation of the integrals of these curves.}
 	\label{fig:vacfvst}
 \end{figure}
-Evidently, both measured values lie within a single standard deviation from one another. We can also compare with the results in \citep{Rahman1964}. In this case, we get a $5.31\%$ error in the VACF measurement while in the MSD measurement a value of $4.97\%$ is obtained. In this case we notice that both our values lie below the result in Ref. \cite{Rahman1964}.
+Evidently, both measured values lie within a single standard deviation from one another. To properly test the agreement between the values, we perform a (different variance) $t$-test with the null hypothesis that the mean values obtained from the slope of the MSD and the integral of the VACF are identical. Such a test yields a $p=0.91 > 0.05$, so we conclude that we can't reject the null hypothesis hence the averages are identical.\\
+We can also compare with the results in \citep{Rahman1964}. In this case, we get a $5.31\%$ error in the VACF measurement while in the MSD measurement a value of $4.97\%$ is obtained. In this case we notice that both our values lie below the result in Ref. \cite{Rahman1964}.
+\subsection{Blocking Analysis}
+In addition to the sampling of $g(r)$ and $S(k)$ from the MC simulation, the energy $E$ and pressure $P$ were obtained from the simulation. During testing, we observed that after $\num{7000}$ cycles, the energy was already stabilized, therefore, the next run was done with $\num{1e6}$ cycles and the equilibration ones were skipped. With these results, 18 block-transformations were applied.\\ Results for the errors in the estimation of $E = \average{H}$ is shown in figure \ref{fig:blockanalysis}. The analysis allows for the computation of the error in $E$ from the plateau value of the curve. This value is taken to be the mean of the last three values in figure \ref{fig:blockanalysis}. The measured value of the energy is then $E = \SI{-95743.47 \pm 7.95e-25}{\joule}$.\\
+\begin{figure}
+	\centering
+	\includegraphics[width=0.99\linewidth]{../task2/results/block_analysis}
+	\caption{Results of blocking analysis for the error in the estimation of energy $E$ of the system. Dashed lines show the estimated plateau value.}
+	\label{fig:blockanalysis}
+\end{figure}
+Notice that up to pool 12, $\sigma_E(M)$ was dominated by the exponential factor $2^M$ coming from $N(M)$. However, later it decreases for the next few polls until it starts oscillating around the reported plateau value $\sigma_E^\mathrm{P}$.
+
 \section{Conclusions}
+We conclude that both simulations show equivalent results in terms of the physical properties of the system that were measured, this is, the static properties $g(r)$ and $S(k)$. Even though both simulations involve integration, the conceptual basis is different. While the GI simulation integrates the equation of motion in configuration space, the MC simulation explores the phase space and finds there the ``physical'' configurations, those with high canonical probability.\\
+The features measured have been compared with the results reported in \citet{Rahman1964}. An excellent ($<5\%$) agreement was found in all measurements, validating the present work's results and showing the equivalence between the approaches taken to analyze the system.\\
+The GI simulation also allowed us to explore the diffusion coefficient and to compute it in two ways as described before. The values obtained $D_\mathrm{VACF} = \SI{2,57 \pm 0.3e-5}{\square\centi\meter\per\second}$ and $D_{\mathrm{MSD}} = \SI{2.56 \pm 0.24 e-5}{\square\centi\meter\per\second}$ are in agreement as proven by the $t$-test.\\
+The error estimation in the MC case for the average energy $E$ was successfully done with blocking analysis, from which a plateau value $\sigma_E^\mathrm{P} = \SI{7.95e-25}{\joule}$ was extracted. We expect a longer simulation would result in a much clearer plateau, however the number of transformations $M$ is very limited by the length of the initial chain $N$. A small increase in $M$ implies an exponential increase in $N$, and thus, in the computing time needed.
 
 
 

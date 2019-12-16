@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.10.3)  7 DEC 2019 22:21
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.10.3)  11 DEC 2019 21:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2224,71 +2224,93 @@ Underfull \hbox (badness 10000) in paragraph at lines 91--93
 
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
 
-LaTeX Warning: Command \r invalid in math mode on input line 151.
+LaTeX Warning: Command \r invalid in math mode on input line 168.
 
 
-LaTeX Warning: Command \r invalid in math mode on input line 151.
+LaTeX Warning: Command \r invalid in math mode on input line 168.
 
-<../task2/results/Tvst.png, id=121, 505.89pt x 361.35pt>
+[2]
+<../task2/results/Tvst.png, id=161, 505.89pt x 361.35pt>
 File: ../task2/results/Tvst.png Graphic file (type png)
 <use ../task2/results/Tvst.png>
-Package pdftex.def Info: ../task2/results/Tvst.png  used on input line 157.
+Package pdftex.def Info: ../task2/results/Tvst.png  used on input line 174.
 (pdftex.def)             Requested size: 221.3985pt x 158.14537pt.
-<../task2/results/gofr.png, id=123, 505.89pt x 361.35pt>
+<../task2/results/gofr.png, id=163, 505.89pt x 361.35pt>
 File: ../task2/results/gofr.png Graphic file (type png)
 <use ../task2/results/gofr.png>
-Package pdftex.def Info: ../task2/results/gofr.png  used on input line 164.
+Package pdftex.def Info: ../task2/results/gofr.png  used on input line 181.
 (pdftex.def)             Requested size: 221.3985pt x 158.14537pt.
-<../task2/results/gofr_mc.png, id=124, 505.89pt x 361.35pt>
+<../task2/results/gofr_mc.png, id=164, 505.89pt x 361.35pt>
 File: ../task2/results/gofr_mc.png Graphic file (type png)
 <use ../task2/results/gofr_mc.png>
-Package pdftex.def Info: ../task2/results/gofr_mc.png  used on input line 170.
+Package pdftex.def Info: ../task2/results/gofr_mc.png  used on input line 187.
 (pdftex.def)             Requested size: 221.3985pt x 158.14537pt.
-[2]
-
-LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix]
- on input line 176.
-
-<../task2/results/sofk.png, id=154, 505.89pt x 361.35pt>
+<../task2/results/sofk.png, id=172, 505.89pt x 361.35pt>
 File: ../task2/results/sofk.png Graphic file (type png)
 <use ../task2/results/sofk.png>
-Package pdftex.def Info: ../task2/results/sofk.png  used on input line 179.
+Package pdftex.def Info: ../task2/results/sofk.png  used on input line 196.
 (pdftex.def)             Requested size: 221.3985pt x 158.14537pt.
-<../task2/results/sofk_mc.png, id=155, 505.89pt x 361.35pt>
+<../task2/results/sofk_mc.png, id=173, 505.89pt x 361.35pt>
 File: ../task2/results/sofk_mc.png Graphic file (type png)
 <use ../task2/results/sofk_mc.png>
-Package pdftex.def Info: ../task2/results/sofk_mc.png  used on input line 185.
+Package pdftex.def Info: ../task2/results/sofk_mc.png  used on input line 202.
 (pdftex.def)             Requested size: 221.3985pt x 158.14537pt.
-<../task2/results/msdvst.png, id=168, 505.89pt x 361.35pt>
-File: ../task2/results/msdvst.png Graphic file (type png)
-<use ../task2/results/msdvst.png>
-Package pdftex.def Info: ../task2/results/msdvst.png  used on input line 210.
-(pdftex.def)             Requested size: 221.3985pt x 158.14537pt.
-<../task2/results/vacfvst.png, id=170, 505.89pt x 361.35pt>
-File: ../task2/results/vacfvst.png Graphic file (type png)
-<use ../task2/results/vacfvst.png>
-Package pdftex.def Info: ../task2/results/vacfvst.png  used on input line 217.
-(pdftex.def)             Requested size: 221.3985pt x 158.14537pt.
-[3 <../task2/results/Tvst.png> <../task2/results/gofr.png> <../task2/results/go
-fr_mc.png> <../task2/results/sofk.png>]
+ [3 <../task2/results/Tvst.png> <../task2/results/gofr.png> <../task2/results/g
+ofr_mc.png>]
 
 LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix]
- on input line 222.
+ on input line 223.
 
-(./report.bbl [4 <../task2/results/sofk_mc.png> <../task2/results/msdvst.png> <
-../task2/results/vacfvst.png>]) [5]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 227.
+<../task2/results/msdvst.png, id=202, 433.62pt x 289.08pt>
+File: ../task2/results/msdvst.png Graphic file (type png)
+<use ../task2/results/msdvst.png>
+Package pdftex.def Info: ../task2/results/msdvst.png  used on input line 228.
+(pdftex.def)             Requested size: 221.3985pt x 147.60088pt.
+<../task2/results/vacfvst.png, id=204, 433.62pt x 289.08pt>
+File: ../task2/results/vacfvst.png Graphic file (type png)
+<use ../task2/results/vacfvst.png>
+Package pdftex.def Info: ../task2/results/vacfvst.png  used on input line 235.
+(pdftex.def)             Requested size: 221.3985pt x 147.60088pt.
+[4 <../task2/results/sofk.png> <../task2/results/sofk_mc.png>]
+
+LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix]
+ on input line 241.
+
+<../task2/results/block_analysis.png, id=220, 505.89pt x 361.35pt>
+File: ../task2/results/block_analysis.png Graphic file (type png)
+<use ../task2/results/block_analysis.png>
+Package pdftex.def Info: ../task2/results/block_analysis.png  used on input lin
+e 245.
+(pdftex.def)             Requested size: 243.54135pt x 173.9588pt.
+
+Underfull \hbox (badness 1472) in paragraph at lines 252--256
+\OT1/cmr/m/n/10 The GI sim-u-la-tion also al-lowed us to ex-plore the
+ []
+
+
+Underfull \hbox (badness 7649) in paragraph at lines 252--256
+\OT1/cmr/m/n/10 dif-fu-sion co-ef-fi-cient and to com-pute it in two
+ []
+
+
+Underfull \hbox (badness 3396) in paragraph at lines 252--256
+\OT1/cmr/m/n/10 ways as de-scribed be-fore. The val-ues ob-tained
+ []
+
+[5 <../task2/results/msdvst.png> <../task2/results/vacfvst.png> <../task2/resul
+ts/block_analysis.png>] (./report.bbl) [6]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 262.
  (./report.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 227.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 227.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 262.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 262.
 Package rerunfilecheck Info: File `report.out' has not changed.
-(rerunfilecheck)             Checksum: 5C0DDDD642038D6A11A31CE3667D3C1E;1108.
+(rerunfilecheck)             Checksum: 07B6363C40457CEE7D3E42E852076FC5;1299.
  ) 
 Here is how much of TeX's memory you used:
- 21288 strings out of 492982
- 385222 string characters out of 6134896
- 478803 words of memory out of 5000000
- 24577 multiletter control sequences out of 15000+600000
+ 21315 strings out of 492982
+ 385771 string characters out of 6134896
+ 473085 words of memory out of 5000000
+ 24593 multiletter control sequences out of 15000+600000
  546257 words of font info for 82 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  39i,13n,48p,10429b,1058s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2315,10 +2337,10 @@ ts/cm/cmti9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
 mtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/ms
 bm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msb
 m7.pfb>
-Output written on report.pdf (5 pages, 939976 bytes).
+Output written on report.pdf (6 pages, 940604 bytes).
 PDF statistics:
- 307 PDF objects out of 1000 (max. 8388607)
- 256 compressed objects within 3 object streams
- 53 named destinations out of 1000 (max. 500000)
- 172 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 344 PDF objects out of 1000 (max. 8388607)
+ 290 compressed objects within 3 object streams
+ 63 named destinations out of 1000 (max. 500000)
+ 201 words of extra memory for PDF output out of 10000 (max. 10000000)
 

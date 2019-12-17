@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.10.3)  11 DEC 2019 21:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.10.3)  17 DEC 2019 11:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2213,107 +2213,103 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 Class revtex4-1 Warning: Assuming \noaffiliation for authors.
 
 
-Underfull \hbox (badness 1430) in paragraph at lines 91--93
+Underfull \hbox (badness 1430) in paragraph at lines 93--95
 \OT1/cmr/m/n/10 RDF has anal-o-gous quan-ti-ties in other fields such
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 91--93
+Underfull \hbox (badness 10000) in paragraph at lines 93--95
 
  []
 
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
 
-LaTeX Warning: Command \r invalid in math mode on input line 168.
+LaTeX Warning: Command \r invalid in math mode on input line 171.
 
 
-LaTeX Warning: Command \r invalid in math mode on input line 168.
+LaTeX Warning: Command \r invalid in math mode on input line 171.
 
 [2]
-<../task2/results/Tvst.png, id=161, 505.89pt x 361.35pt>
+<../task2/results/Tvst.png, id=158, 505.89pt x 361.35pt>
 File: ../task2/results/Tvst.png Graphic file (type png)
 <use ../task2/results/Tvst.png>
-Package pdftex.def Info: ../task2/results/Tvst.png  used on input line 174.
-(pdftex.def)             Requested size: 221.3985pt x 158.14537pt.
-<../task2/results/gofr.png, id=163, 505.89pt x 361.35pt>
+Package pdftex.def Info: ../task2/results/Tvst.png  used on input line 177.
+(pdftex.def)             Requested size: 243.54135pt x 173.9588pt.
+<../task2/results/gofr.png, id=160, 505.89pt x 361.35pt>
 File: ../task2/results/gofr.png Graphic file (type png)
 <use ../task2/results/gofr.png>
-Package pdftex.def Info: ../task2/results/gofr.png  used on input line 181.
-(pdftex.def)             Requested size: 221.3985pt x 158.14537pt.
-<../task2/results/gofr_mc.png, id=164, 505.89pt x 361.35pt>
+Package pdftex.def Info: ../task2/results/gofr.png  used on input line 184.
+(pdftex.def)             Requested size: 243.54135pt x 173.9588pt.
+<../task2/results/gofr_mc.png, id=161, 505.89pt x 361.35pt>
 File: ../task2/results/gofr_mc.png Graphic file (type png)
 <use ../task2/results/gofr_mc.png>
-Package pdftex.def Info: ../task2/results/gofr_mc.png  used on input line 187.
-(pdftex.def)             Requested size: 221.3985pt x 158.14537pt.
-<../task2/results/sofk.png, id=172, 505.89pt x 361.35pt>
+Package pdftex.def Info: ../task2/results/gofr_mc.png  used on input line 190.
+(pdftex.def)             Requested size: 243.54135pt x 173.9588pt.
+<../task2/results/sofk.png, id=169, 505.89pt x 361.35pt>
 File: ../task2/results/sofk.png Graphic file (type png)
 <use ../task2/results/sofk.png>
-Package pdftex.def Info: ../task2/results/sofk.png  used on input line 196.
-(pdftex.def)             Requested size: 221.3985pt x 158.14537pt.
-<../task2/results/sofk_mc.png, id=173, 505.89pt x 361.35pt>
+Package pdftex.def Info: ../task2/results/sofk.png  used on input line 199.
+(pdftex.def)             Requested size: 243.54135pt x 173.9588pt.
+<../task2/results/sofk_mc.png, id=170, 505.89pt x 361.35pt>
 File: ../task2/results/sofk_mc.png Graphic file (type png)
 <use ../task2/results/sofk_mc.png>
-Package pdftex.def Info: ../task2/results/sofk_mc.png  used on input line 202.
-(pdftex.def)             Requested size: 221.3985pt x 158.14537pt.
+Package pdftex.def Info: ../task2/results/sofk_mc.png  used on input line 205.
+(pdftex.def)             Requested size: 243.54135pt x 173.9588pt.
  [3 <../task2/results/Tvst.png> <../task2/results/gofr.png> <../task2/results/g
 ofr_mc.png>]
-
-LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix]
- on input line 223.
-
-<../task2/results/msdvst.png, id=202, 433.62pt x 289.08pt>
+<../task2/results/msdvst.png, id=199, 505.89pt x 361.35pt>
 File: ../task2/results/msdvst.png Graphic file (type png)
 <use ../task2/results/msdvst.png>
-Package pdftex.def Info: ../task2/results/msdvst.png  used on input line 228.
-(pdftex.def)             Requested size: 221.3985pt x 147.60088pt.
-<../task2/results/vacfvst.png, id=204, 433.62pt x 289.08pt>
+Package pdftex.def Info: ../task2/results/msdvst.png  used on input line 231.
+(pdftex.def)             Requested size: 243.54135pt x 173.9588pt.
+<../task2/results/vacfvst.png, id=201, 505.89pt x 361.35pt>
 File: ../task2/results/vacfvst.png Graphic file (type png)
 <use ../task2/results/vacfvst.png>
-Package pdftex.def Info: ../task2/results/vacfvst.png  used on input line 235.
-(pdftex.def)             Requested size: 221.3985pt x 147.60088pt.
-[4 <../task2/results/sofk.png> <../task2/results/sofk_mc.png>]
+Package pdftex.def Info: ../task2/results/vacfvst.png  used on input line 238.
+(pdftex.def)             Requested size: 243.54135pt x 173.9588pt.
+ [4 <../task2/results/sofk.png> <../task2/results/sofk_mc.png>]
 
 LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix]
- on input line 241.
+ on input line 244.
 
-<../task2/results/block_analysis.png, id=220, 505.89pt x 361.35pt>
+<../task2/results/block_analysis.png, id=218, 505.89pt x 361.35pt>
 File: ../task2/results/block_analysis.png Graphic file (type png)
 <use ../task2/results/block_analysis.png>
 Package pdftex.def Info: ../task2/results/block_analysis.png  used on input lin
-e 245.
-(pdftex.def)             Requested size: 243.54135pt x 173.9588pt.
+e 248.
+(pdftex.def)             Requested size: 245.75226pt x 175.54124pt.
 
-Underfull \hbox (badness 1472) in paragraph at lines 252--256
+Underfull \hbox (badness 1472) in paragraph at lines 255--259
 \OT1/cmr/m/n/10 The GI sim-u-la-tion also al-lowed us to ex-plore the
  []
 
 
-Underfull \hbox (badness 7649) in paragraph at lines 252--256
+Underfull \hbox (badness 7649) in paragraph at lines 255--259
 \OT1/cmr/m/n/10 dif-fu-sion co-ef-fi-cient and to com-pute it in two
  []
 
 
-Underfull \hbox (badness 3396) in paragraph at lines 252--256
+Underfull \hbox (badness 3396) in paragraph at lines 255--259
 \OT1/cmr/m/n/10 ways as de-scribed be-fore. The val-ues ob-tained
  []
 
 [5 <../task2/results/msdvst.png> <../task2/results/vacfvst.png> <../task2/resul
 ts/block_analysis.png>] (./report.bbl) [6]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 262.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 265.
  (./report.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 262.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 262.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 265.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 265.
 Package rerunfilecheck Info: File `report.out' has not changed.
-(rerunfilecheck)             Checksum: 07B6363C40457CEE7D3E42E852076FC5;1299.
+(rerunfilecheck)             Checksum: 6ACBE8C12317394E00C1FF94F41CA058;1238.
  ) 
 Here is how much of TeX's memory you used:
- 21315 strings out of 492982
- 385771 string characters out of 6134896
- 473085 words of memory out of 5000000
- 24593 multiletter control sequences out of 15000+600000
- 546257 words of font info for 82 fonts, out of 8000000 for 9000
+ 21298 strings out of 492982
+ 385613 string characters out of 6134896
+ 473370 words of memory out of 5000000
+ 24585 multiletter control sequences out of 15000+600000
+ 543322 words of font info for 71 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 39i,13n,48p,10429b,1058s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 39i,13n,48p,10429b,1056s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb></u
 sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/sha
 re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/tex
@@ -2321,26 +2317,26 @@ live/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr/share/texlive/te
 xmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texlive/texmf-dis
 t/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/font
 s/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb
-></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/s
-hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/tex
-live/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmsy9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmti9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/ms
-bm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msb
-m7.pfb>
-Output written on report.pdf (6 pages, 940604 bytes).
+1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pf
+b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/te
+xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmsy9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmti9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/m
+sbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/ms
+bm7.pfb>
+Output written on report.pdf (6 pages, 1008106 bytes).
 PDF statistics:
- 344 PDF objects out of 1000 (max. 8388607)
- 290 compressed objects within 3 object streams
- 63 named destinations out of 1000 (max. 500000)
- 201 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 343 PDF objects out of 1000 (max. 8388607)
+ 289 compressed objects within 3 object streams
+ 61 named destinations out of 1000 (max. 500000)
+ 193 words of extra memory for PDF output out of 10000 (max. 10000000)
 
